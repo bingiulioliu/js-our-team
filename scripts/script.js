@@ -74,6 +74,8 @@ function newMemberInjector() {
     // Richiamo la funzione
     teamMemberInjector(teamMembers);
 
+    // Pulisce il form dopo il submit
+    newMemberForm.reset();
 }
 
 // Event Listener
