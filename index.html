@@ -20,10 +20,53 @@
         </div>
     </header>
     <main>
+        <!-- Lista membri -->
         <div class="container mt-5">
             <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4" id="cards-container">
                 <!-- Iniettare qui le schede da JS -->
-                
+
+            </div>
+        </div>
+        <!-- Form -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow-sm border-0 bg-dark text-white p-4">
+                        <h2 class="h4 fw-bold mb-4 text-center text-uppercase ls-wide">Add New Member</h2>
+
+                        <form id="team-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label small text-secondary">Nome Completo</label>
+                                <input type="text" class="form-control form-control-sm bg-secondary text-white border-0"
+                                    id="name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="role" class="form-label small text-secondary">Ruolo</label>
+                                <input type="text" class="form-control form-control-sm bg-secondary text-white border-0"
+                                    id="role">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label small text-secondary">Indirizzo Email</label>
+                                <input type="email"
+                                    class="form-control form-control-sm bg-secondary text-white border-0" id="email"
+                                    required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="img" class="form-label small text-secondary">URL Immagine</label>
+                                <input type="text" class="form-control form-control-sm bg-secondary text-white border-0"
+                                    id="img">
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-info fw-bold text-uppercase">Aggiungi al
+                                    Team</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

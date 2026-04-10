@@ -1,10 +1,11 @@
 const cardsContainer = document.querySelector('#cards-container');
-
+// Per il form
+const newMemberForm = document.querySelector('#team-form');
 
 // Template HTML da iniettare
 
 function teamMemberInjector (membro) {
-    // Creo un accumulatore
+    // Creo un accumulatore !! Assegnato valore zero altrimenti mi riporta un undefined perchè non inizializzata
     let accumulatoreMembri = '';
     for (const membro of teamMembers) {
         // Template HTML da iniettare
@@ -40,4 +41,7 @@ function teamMemberInjector (membro) {
     cardsContainer.innerHTML = accumulatoreMembri;
 }
 
+// Richiamo la funzione per iniettare i membri
 teamMemberInjector(teamMembers);
+
+// Funzione per aggiungere nuove schede membri dal form
