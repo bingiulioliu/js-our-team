@@ -44,4 +44,40 @@ function teamMemberInjector (membro) {
 // Richiamo la funzione per iniettare i membri
 teamMemberInjector(teamMembers);
 
-// Funzione per aggiungere nuove schede membri dal form
+// Oggetto di appoggio per il nuovo membro
+let nuovoMembro = {
+    name: "",
+    role: "",
+    email: "",
+    img: ""
+};
+
+// Funzione per accumulare nuovi membri
+function getNewMember () {
+    return {
+    // Collego variabili col form
+    name: document.querySelector('#name').value,
+    role: document.querySelector('#role').value,
+    email: document.querySelector('#email').value,
+    img: document.querySelector('#img').value
+    };
+}
+
+// Funzione di iniezione
+function newMemberInjector() {
+    // Popolo l'oggetto
+    nuovoMembro = getNewMember();
+
+    // Aggiorno teamMembers
+    teamMembers.push(nuovoMembro);
+
+    // Richiamo la funzione
+    teamMemberInjector(teamMembers);
+
+}
+
+// Event Listener
+newMemberForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    newMemberInjector();
+});
