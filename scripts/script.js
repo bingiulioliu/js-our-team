@@ -5,7 +5,7 @@ const cardsContainer = document.querySelector('#cards-container');
 
 function teamMemberInjector (membro) {
     // Creo un accumulatore
-    let accumulatoreMembri;
+    let accumulatoreMembri = '';
     for (const membro of teamMembers) {
         // Template HTML da iniettare
         const cardTemplate = `
